@@ -108,10 +108,10 @@ tail(dt2)
 str(dt2)
 
 colnames(dt1)
-rownames(dt1)
+names1<-rownames(dt1)
 
 colnames(dt2)
-rownames(dt2)
+names2<-rownames(dt2)
 
 
 
@@ -135,7 +135,7 @@ rownames(dt2)
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
 
 ```{r}
-
+commonAnimals<-intersect(names1,names2)
 
 
 
