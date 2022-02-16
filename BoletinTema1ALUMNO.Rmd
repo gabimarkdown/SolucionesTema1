@@ -146,7 +146,10 @@ commonAnimals<-intersect(names1,names2)
 e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo de animales son?
 
 ```{r}
-
+names<-setdiff(names1,names2)
+str(names)
+#son 4 animales
+#Son Arctic fox,Patas monkey,Arctic ground squirrel y Mole rat
 
 
 
