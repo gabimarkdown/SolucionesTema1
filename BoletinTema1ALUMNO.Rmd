@@ -107,6 +107,12 @@ head(dt2)
 tail(dt2)
 str(dt2)
 
+colnames(dt1)
+rownames(dt1)
+
+colnames(dt2)
+rownames(dt2)
+
 
 
 
