@@ -240,8 +240,13 @@ es el histograma (hist). Determina, de forma aproximada, utilizando el histogram
 entre los contenidos de vitamina C (VitC), para las diferentes variedades de calabaza (variable Cult),
 en el conjunto de datos cabbages.
 ```{r}
+unique(cabbages$Cult)#obtenemos las variedades de calabaza que haya
+hist(cabbages[cabbages$Cult=="c39",4])#histograma tipo c39 calabaza
+hist(cabbages[cabbages$Cult=="c52",4])#histograma tipo c52 calabaza
 
+#Si que se notan diferencias para los valores de la VitC dependiendo de si la variedad de calabaza es c39 o c52,de forma que hay mas contenido de Vitamina C para el cultivo c52
 ```
+
 
 7. Un modelo sencillo para relacionar variables es la predicción lineal. En el siguiente ejemplo se utiliza el
 conjunto de datos whiteside, de la librería MASS. Esta aproximación propone un modelo que predice
