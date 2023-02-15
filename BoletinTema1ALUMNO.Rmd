@@ -147,7 +147,13 @@ del registro de datos mammals del paquete MASS y conjunto de datos Animals2 de l
 robustbase. ¿Presentan el mismo comportamiento ?.¿Podríamos decir que siguen una distribución
 Gaussiana ?
 ```{r}
+library(car)
+library(MASS)
+library(robustbase)
+qqPlot(log(mammals$brain))
+qqPlot(log(Animals2$brain))
 
+#Presentan un comportamiento practicamente igual y a la vez ambos siguen una distribucion gaussiana
 ```
 
 3. La función library sin argumentos abre una ventana y muestra las librerías que han sido instaladas.
