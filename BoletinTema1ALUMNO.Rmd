@@ -130,6 +130,12 @@ differentAnimals
 
 f. Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
 ```{r}
+solomammals<-setdiff(rownames(A), commonAnimals)#obtenemos los comunes que no estan en Animals2
+soloAnimals2<-setdiff(rownames(B), commonAnimals)#obtenemos los comunes que no estan en mammals
+
+#Obtenemos la diferencia entre los que no aparecen en ambos conjuntos
+setdiff(solomammals, soloAnimals2)
+setdiff(soloAnimals2, solomammals)
 
 ```
 
