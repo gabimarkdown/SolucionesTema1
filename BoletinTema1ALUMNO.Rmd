@@ -273,13 +273,25 @@ abline(Model2)
 a. Utiliza un procedimiento análogo para determinar si se aprecia una relación lineal entre los niveles de
 vitamina C, VitC en función del peso de la calabaza, HeadWt, en el conjunto de datos cabbages.
 ```{r}
+plot(cabbages$HeadWt, cabbages$VitC)
+Model3<- lm(VitC ~ HeadWt,data= cabbages)
+abline(Model3)
 
+#Como podemos comprobar no existe una relacion lineal entre ambas,ya que los datos estan muy dispersos
 ```
 
 b. Repite el apartado anterior, pero obteniendo un modelo para cada una de las dos variedades de calabaza,
 Cult. VerParámetros básicos plot.
 ```{r}
-
+#Diagrama de dispersión etiquetando según un factor.
+plot(cabbages$HeadWt, cabbages$VitC,pch=c(6,16)[whiteside$Insul])
+legend(x="topright",legend=c("Cult =c52","Cult= c39"), pch=c(6,16))
+# Planteamos 2 modelos lineales, uno para los datos de cada factor
+Model1 <- lm(VitC ~ HeadWt, data = cabbages, subset = which(Cult == "c39"))
+Model2 <- lm(VitC ~ HeadWt, data = cabbages, subset = which(Cult == "c52"))
+# Representamos las rectas correspondientes a cada modelo lineal
+abline(Model1, lty=2)
+abline(Model2)
 ```
 
 c. Usa summary con cada uno de los modelos obtenidos y observa Coefficients. Dado que hemos
@@ -289,6 +301,8 @@ caracterísiticas del modelo). Observa que en todos los casos, la pendiene es ne
 calabazas de más peso contienen menos vitamina C. No te preocupes por el resto de parámetros del
 modelo, por el momento.
 ```{r}
-
+summary(Model3)#summary del modelo del apartadao a
+summary(Model1)#summary del modelo de c39 del apartado b
+summary(Model2)#summary del modelo de c52 del apartado b
 ```
 
