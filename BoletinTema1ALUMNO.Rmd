@@ -122,7 +122,10 @@ commonAnimals <- intersect(rownames(Animals2),rownames(mammals))
 e. Usa setdiff para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo
 de animales son?
 ```{r}
-
+differentAnimals<-setdiff(rownames(Animals2),rownames(mammals))
+differentAnimals
+#Son 5 animales los que no estan en ambos conjuntos
+#el tipo de animales son diplodocus,potar monkey,triceratops,Brachiosaurus,Mole,Artic fox y Artic ground squirrel
 ```
 
 f. Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
