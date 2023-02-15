@@ -103,7 +103,13 @@ str(Animals2)
 
 c. Muestra los nombres de las filas y las columnas (rownames, colnames)
 ```{r}
+#filas
+rownames(mammals)
+rownames(Animals2)
 
+#columnas
+colnames(mammals)
+colnames(Animals2)
 ```
 
 d. Usa la función intersect y almacena en la variable commonAnimals los aminales que aparezcan
