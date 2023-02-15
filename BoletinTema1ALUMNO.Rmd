@@ -185,6 +185,11 @@ conjunto de datos.
 
 a. Determina las tres primeras etapas para el conjunto de datos cabbages del paquete MASS
 ```{r}
+#Las 3 etapas para el conjunto cabbages
+head(cabbages)
+dim(cabbages)
+tail(cabbages)
+str(cabbages)
 
 ```
 
@@ -192,7 +197,8 @@ b. Puedes determinar el número de valores perdidos (almacenados como NA en R) u
 is.na. Determina el número de valores perdidos para cada una de las variables del conjunto
 cabbages.
 ```{r}
-
+any(is.na(cabbages))#saber si hay algun NA en el dataframe
+colSums(sapply(cabbages, is.na))#sabiendo que no hay NAs comprobamos que es asi
 ```
 
 c. Repite los apartados anteriores con el conjunto de datos Chile del paquete carData.
