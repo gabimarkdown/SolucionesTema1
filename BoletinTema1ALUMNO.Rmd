@@ -203,13 +203,25 @@ colSums(sapply(cabbages, is.na))#sabiendo que no hay NAs comprobamos que es asi
 
 c. Repite los apartados anteriores con el conjunto de datos Chile del paquete carData.
 ```{r}
+library(carData)
 
+#Primera parte
+#Las 3 etapas para el conjunto cabbages
+head(Chile)
+dim(Chile)
+tail(Chile)
+str(Chile)
+
+#Segunda parte
+any(is.na(Chile))#saber si hay algun NA en el dataframe
+colSums(sapply(Chile, is.na))#sabiendo que no hay NAs comprobamos que es asi
 ```
 
 d. Utiliza la función summary, sobre cabbages y Chile y observa como, además de otros
 estadísticos, también devuelve el número de valores perdidos de cada variable.
 ```{r}
-
+summary(cabbages)
+summary(Chile)
 ```
 
 5. Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la
