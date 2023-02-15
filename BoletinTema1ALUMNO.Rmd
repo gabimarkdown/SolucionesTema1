@@ -228,7 +228,10 @@ summary(Chile)
 aproximación visual proporcionada por qqPlot para determinar si podemos asumir que las variables
 HeadWt y VitC del conjunto cabbages verifican esta condición.
 ```{r}
+qqPlot(cabbages$HeadWt)#representación visual de HeadWt
+qqPlot(cabbages$VitC)#representación visual de Vitc
 
+#En ambos casos podemos suponer que siguen una distribucion gaussiana
 ```
 
 
